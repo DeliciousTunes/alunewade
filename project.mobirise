@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "index.html",
+    "currentPage": "discography.html",
     "theme": {
       "name": "wellnessm5",
       "title": "WellnessM5",
@@ -38,7 +38,7 @@
       ]
     },
     "path": "@PROJECT_PATH@",
-    "name": "ALUNE WADE-V 2024",
+    "name": "ALUNE WADE-V 2024-clone",
     "versionFirst": "5.6.11",
     "siteFonts": [
       {
@@ -69,7 +69,7 @@
     "mbrsiteDomain": "vqgdzwlf56",
     "cookiesAlert": false,
     "gdpr": false,
-    "uniqCompNum": 145,
+    "uniqCompNum": 146,
     "versionPublish": "5.6.11",
     "screenshot": "screenshot.png"
   },
@@ -597,6 +597,141 @@
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            "img": {
+              "width": "100%",
+              "max-height": "800px",
+              "object-fit": "cover"
+            },
+            ".image-wrapper": {
+              "max-height": "800px",
+              "overflow": "hidden"
+            },
+            ".social-row": {
+              "display": "flex",
+              "flex-wrap": "wrap"
+            },
+            ".soc-item": {
+              "position": "relative",
+              "display": "flex",
+              "cursor": "pointer",
+              "align-items": "center",
+              "justify-content": "center",
+              "border-radius": "50%",
+              "margin-right": "0.5rem",
+              "margin-bottom": "1rem",
+              "padding": "0.5rem",
+              "height": "2.5rem",
+              "width": "2.5rem",
+              "-webkit-box-shadow": "preserve-3d",
+              "-moz-box-shadow": "preserve-3d",
+              "transform-style": "preserve-3d",
+              "span": {
+                "color": "@socialIconColor",
+                "z-index": "99999"
+              },
+              "&::before, &::after": {
+                "content": "\"\"",
+                "width": "101%",
+                "height": "102%",
+                "position": "absolute",
+                "border-radius": "50%",
+                "top": "-1px",
+                "left": "0",
+                "-webkit-box-shadow": "translateZ(-1px)",
+                "-moz-box-shadow": "translateZ(-1px)",
+                "transform": "translateZ(-1px)"
+              },
+              "&::before": {
+                "border": "1px solid transparent",
+                "transition": "border-top-color 0.1s linear, border-right-color 0.1s linear 0.1s, border-bottom-color 0.1s linear 0.2s"
+              },
+              "&:hover::before": {
+                "border-top-color": "@socialBorderColor",
+                "border-right-color": "@socialBorderColor",
+                "border-bottom-color": "@socialBorderColor"
+              },
+              "&::after": {
+                "border": "0 solid transparent",
+                "transition": "transform 0.2s linear 0s, border-left-width 0s linear 0.3s"
+              },
+              "&:hover::after": {
+                "border-top": "1px solid @socialBorderColor",
+                "border-left-color": "@socialBorderColor",
+                "border-left-width": "1px",
+                "bordersborder-right-width": "1px",
+                "borderstransform": "rotate(270deg)"
+              }
+            },
+            ".mbr-section-subtitle": {
+              "color": "#c0bcb7",
+              "margin-bottom": "77px"
+            },
+            ".mbr-text": {},
+            ".text": {
+              "color": "#ddc499"
+            },
+            ".one": {
+              "color": "#c0bcb7",
+              "font-style": "italic"
+            },
+            "@media (max-width: 991px)": {
+              ".info": {
+                "margin-top": "2rem"
+              }
+            },
+            "@media (min-width: 992px)": {
+              ".right": {
+                "padding-right": "32px"
+              },
+              ".left": {
+                "padding-left": "32px"
+              }
+            },
+            "& when (@reverse)": {
+              ".row": {
+                "flex-direction": "row-reverse"
+              },
+              "@media (min-width: 992px)": {
+                ".right": {
+                  "padding-left": "32px",
+                  "padding-right": "16px"
+                },
+                ".left": {
+                  "padding-right": "32px",
+                  "padding-left": "16px"
+                }
+              },
+              ".info": {
+                "text-align": "right"
+              },
+              ".social-row": {
+                "justify-content": "flex-end"
+              }
+            }
+          },
+          "_name": "features8",
+          "_sourceTheme": "wellnessm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"features8\" group=\"Features\" mbr-class=\"{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n    \n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"3\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"3\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width Image\" min=\"4\" max=\"8\" step=\"1\" value=\"8\" condition=\"!fullWidth\">\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverse\">\n        <header>Show/Hide</header>\n        <select title=\"Images\" name=\"cardsAmount\">\n            <option value=\"1\" selected>1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n        </select>\n        <input type=\"checkbox\" name=\"showHeading\" title=\"Title\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Info\" name=\"showInfo\">\n        <header condition=\"showSocial\">Social</header>\n        <input type=\"checkbox\" title=\"Social\" name=\"showSocial\" checked>\n        <select title=\"Align\" name=\"contentAlign\" condition=\"showSocial\">\n            <option value>Left</option>\n            <option value=\"justify-content-center\" selected>Center</option>\n            <option value=\"justify-content-end\">Right</option>\n        </select>\n        <input type=\"range\" name=\"socialCount\" title=\"Count\" min=\"1\" max=\"4\" step=\"1\" value=\"1\" condition=\"showSocial\">\n        <input type=\"color\" title=\"Color\" name=\"socialIconColor\" value=\"#ffffff\" condition=\"showSocial\">\n        <input type=\"color\" title=\"Border\" name=\"socialBorderColor\" value=\"#4c4c4c\" condition=\"showSocial\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#000000\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#171410\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-lg-{{textWidth}} right\">\n                <div class=\"col-12\">\n                    <div class=\"image-wrapper\">\n                        <a href=\"https://open.spotify.com/intl-de/album/7x0kN2hPM9KjbCXhfqP41i?si=A6od6yA0R_CIBKNYvvlajg\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/alune-wade-triptyque-1664x1664.jpg\" alt=\"Triptyque by Alune Wade\"></a>\n                    </div>\n                </div>\n                <div class=\"col-12 mt-2\" mbr-if=\"cardsAmount>1\">\n                    <div class=\"image-wrapper\">\n                        <img src=\"../_images/features/features5.jpg\" alt=\"Mobirise\">\n                    </div>\n                </div>\n                <div class=\"col-12 mt-2\" mbr-if=\"cardsAmount>2\">\n                    <div class=\"image-wrapper\">\n                        <img src=\"../_images/features/features7.jpg\" alt=\"Mobirise\">\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"col-12 col-lg left\">\n                <div class=\"row justify-content-center info\">\n                    <h3 class=\"mbr-section-title heading mbr-fonts-style mb-3\" data-app-selector=\".mbr-section-title\" data-app-placeholder=\"Type Text\" mbr-theme-style=\"display-2\" mbr-if=\"showHeading\">NEW SINGLE OUT</h3>\n                    <h3 class=\"mbr-section-subtitle mbr-fonts-style\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\">&nbsp;\"Triptyque'' presents a refreshing sound that illuminates the essence of African jazz, seamlessly blending West African rhythms with modern sonic textures. Infused with Alune's characteristic groove, rooted in his mastery of the bass, the track showcases his eclectic approach to composition.</h3>\n                    <div class=\"col-12\" mbr-if=\"showInfo || showSocial\">\n                        <p mbr-text class=\"mbr-fonts-style mbr-text mb-1\" data-app-selector=\".mbr-text\" mbr-if=\"showInfo\">DATE: \n                            <span class=\"text\" data-app-edit=\"content\" data-app-selector=\".text\">MAY 27, 2021</span>\n                        </p>\n                        <p mbr-text class=\"mbr-fonts-style mbr-text mb-1\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showInfo\">NAME: \n                            <span class=\"text\" data-app-edit=\"content\" data-app-selector=\".text\">WELLNESS</span>\n                        </p>\n                        <p mbr-text class=\"mbr-fonts-style mbr-text\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\" mbr-if=\"showInfo\">BRAND: \n                            <span class=\"one\" data-app-edit=\"content\" data-app-selector=\".one\">Mobirise</span>\n                        </p>\n                    </div>\n                    <div class=\"social-row display-7 mt-3 {{contentAlign}}\" mbr-if=\"showSocial\">\n                        <div class=\"soc-item\">\n                            <a href=\"https://open.spotify.com/intl-de/album/7x0kN2hPM9KjbCXhfqP41i?si=u1PprxMDQw6dkr48Wg6XOw\" target=\"_blank\">\n                                <span mbr-icon class=\"mbr-iconfont mdi-av-play-circle-fill\" style=\"font-size: 100px;\"></span>\n                            </a>\n                        </div>\n                        <div class=\"soc-item\" mbr-if=\"socialCount>1\">\n                            <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                <span mbr-icon class=\"mbr-iconfont socicon socicon-instagram\"></span>\n                            </a>\n                        </div>\n                        <div class=\"soc-item\" mbr-if=\"socialCount>2\">\n                            <a href=\"https://instagram.com/mobirise\" target=\"_blank\">\n                                <span mbr-icon class=\"mbr-iconfont socicon-logmein socicon\"></span>\n                            </a>\n                        </div>\n                        <div class=\"soc-item\" mbr-if=\"socialCount>3\">\n                            <a href=\"https://www.youtube.com/c/mobirise\" target=\"_blank\">\n                                <span mbr-icon class=\"mbr-iconfont socicon socicon-youtube\"></span>\n                            </a>\n                        </div>\n                        <div class=\"soc-item\" mbr-if=\"socialCount>4\">\n                            <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                <span mbr-icon class=\"mbr-iconfont socicon socicon-telegram\"></span>\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "uabqf5ylzd",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "features8-41"
         },
         {
           "alias": false,
