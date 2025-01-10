@@ -69,7 +69,7 @@
     "mbrsiteDomain": "vqgdzwlf56",
     "cookiesAlert": false,
     "gdpr": false,
-    "uniqCompNum": 155,
+    "uniqCompNum": 158,
     "versionPublish": "5.6.11",
     "screenshot": "screenshot.png"
   },
@@ -6602,394 +6602,75 @@
           "alias": false,
           "_styles": {
             "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 15px)",
-              "padding-bottom": "(@paddingBottom * 15px)"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
             },
             "& when (@bg-type = 'color')": {
               "background-color": "@bg-value"
             },
-            "h2": {
-              "width": "fit-content",
-              "display": "inline-block",
-              "&:before": {
-                "position": "absolute",
-                "content": "''",
-                "left": "50%",
-                "top": "-120px",
-                "bottom": "0",
-                "width": "1px",
-                "height": "100px",
-                "background": "currentColor"
-              },
-              "position": "relative"
-            },
-            "li": {
-              "list-style": "none"
-            },
-            ".location-wrap": {
-              "min-width": "500px"
-            },
-            ".btn": {
-              "min-width": "230px"
-            },
-            ".item-wrap": {
-              "display": "flex",
-              "align-items": "center",
-              "margin-bottom": "1.8rem",
-              "justify-content": "space-between"
-            },
-            ".col-title": {
-              "margin-bottom": "2rem"
-            },
-            "h3": {
-              "min-width": "110px"
-            },
-            ".date-wrap": {
-              "min-width": "260px"
-            },
-            ".btn-primary-outline, .btn-secondary-outline, .btn-info-outline, .btn-success-outline, .btn-warning-outline, .btn-danger-outline, .btn-black-outline, .btn-white-outline": {
-              "border": "none",
-              "&:hover, &:focus": {
-                "background": "inherit !important",
-                "color": "inherit !important"
-              }
-            },
-            ".list": {
-              "padding": "0",
-              "margin": "0"
-            },
-            ".icon-wrap, .date-wrap": {
-              "display": "flex",
-              "align-items": "center"
-            },
-            ".btn span": {
-              "font-size": "1rem"
-            },
-            "h6": {
-              "margin": "0"
-            },
-            "h4": {
-              "line-height": "1.2",
-              "padding-left": "1rem",
-              "margin": "0"
-            },
-            ".icon-wrap .mbr-iconfont": {
-              "font-size": "1rem",
-              "padding-right": "0.5rem",
-              "display": "block",
-              "cursor": "pointer",
-              "transition": "all 0.6s",
-              "color": "currentColor"
-            },
-            ".time-wrap": {
-              "display": "flex",
-              "align-items": "center",
-              "justify-content": "space-between",
-              "min-width": "150px"
-            },
-            "@media (max-width: 992px)": {
-              ".item-wrap": {
-                "flex-direction": "column",
-                "padding-bottom": "2rem",
-                "border-bottom": "1px solid lightgray"
-              },
-              ".first": {
-                "border-top": "1px solid lightgray",
-                "padding-top": "2rem"
-              },
-              ".date-wrap": {
-                "min-width": "auto"
-              },
-              ".location-wrap": {
-                "min-width": "auto",
-                "padding-bottom": "1rem"
-              },
-              "h3": {
-                "min-width": "auto"
-              }
-            },
-            "H1": {
-              "color": "#8d98b3"
-            },
-            ".mbr-section-subtitle, .title-align": {
-              "color": "#ba9b67"
-            }
-          },
-          "_name": "content6",
-          "_sourceTheme": "audiom4",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"content6 audiom4_content6\" group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n\t\t<input type=\"range\" inline title=\"Items\" name=\"menuItems1\" min=\"1\" max=\"15\" step=\"1\" value=\"1\">\n\t\t<header>Show / Hide</header>\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showSubTitle\">\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showmainTitle\" checked>\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#000000\" selected>\n\t\t\t<input type=\"video\" title=\"Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row justify-content-center\">\n\t\t\t<div class=\"mbr-black col-md-12 col-lg-12\">\n\t\t\t\t<div class=\"title-align align-center\">\n\t\t\t\t\t<h2 class=\"mbr-section-subtitle mbr-semibold align-center mbr-light mbr-fonts-style\" data-app-selector=\".mbr-section-subtitle, .title-align\" mbr-theme-style=\"display-4\" mbr-if=\"showSubTitle\">\n\t\t\t\t\t\tUpcoming\n\t\t\t\t\t</h2>\n\t\t\t\t</div>\n\t\t\t\t<h1 class=\"mbr-section-title align-center mbr-bold pb-5 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showmainTitle\">UPCOMING TOUR DATES 2025&nbsp;</h1>\n\t\t\t</div>\n\n\t\t\t<div class=\"col-12 list-col col-md-12 col-lg-12 md-pb\">\n\t\t\t\t<ul class=\"list\" mbr-list mbr-list-grow=\"menuItems1\">\n\t\t\t\t\t<li class=\"item-wrap\">\n\t\t\t\t\t\t<div class=\"date-wrap\">\n\t\t\t\t\t\t\t<h3 mbr-text class=\"mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-2\">XX</h3>\n\n\t\t\t\t\t\t\t<h4 mbr-text class=\"mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\tApril<br>2025\n\t\t\t\t\t\t\t</h4>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div class=\"location-wrap\">\n\t\t\t\t\t\t\t<h5 mbr-text class=\"mbr-bold align-left pb-1 mbr-fonts-style\" mbr-theme-style=\"display-5\">To be announced soon</h5>\n\t\t\t\t\t\t\t<div class=\"icon-wrap\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mobi-mbri-map-pin mobi-mbri\"></span>\n\t\t\t\t\t\t\t\t<h6 mbr-text class=\"location mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".location, .icon-wrap\">France</h6>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div class=\"mbr-section-btn align-right\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-primary-outline\" href=\"https://jazzahead.de/en/\" data-app-placeholder=\"Type Text\" target=\"_blank\"><span class=\"mobi-mbri mobi-mbri-layers mbr-iconfont mbr-iconfont-btn\"></span>Not available yet</a></div>\n\t\t\t\t\t</li>\n\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
-          "_isUserblock": true,
-          "_cid": "u6mB2VI3ix",
-          "_anchor": "content6-3k",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 15px)",
-              "padding-bottom": "(@paddingBottom * 15px)"
-            },
             "& when (@bg-type = 'image')": {
               "background-image": "url(@bg-value)"
             },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "h2": {
-              "width": "fit-content",
-              "display": "inline-block",
-              "&:before": {
-                "position": "absolute",
-                "content": "''",
-                "left": "50%",
-                "top": "-120px",
-                "bottom": "0",
-                "width": "1px",
-                "height": "100px",
-                "background": "currentColor"
-              },
-              "position": "relative"
-            },
-            "li": {
-              "list-style": "none"
-            },
-            ".location-wrap": {
-              "min-width": "500px"
-            },
-            ".btn": {
-              "min-width": "230px"
-            },
-            ".item-wrap": {
-              "display": "flex",
-              "align-items": "center",
-              "margin-bottom": "1.8rem",
-              "justify-content": "space-between"
-            },
-            ".col-title": {
-              "margin-bottom": "2rem"
-            },
-            "h3": {
-              "min-width": "110px"
-            },
-            ".date-wrap": {
-              "min-width": "260px"
-            },
-            ".btn-primary-outline, .btn-secondary-outline, .btn-info-outline, .btn-success-outline, .btn-warning-outline, .btn-danger-outline, .btn-black-outline, .btn-white-outline": {
-              "border": "none",
-              "&:hover, &:focus": {
-                "background": "inherit !important",
-                "color": "inherit !important"
-              }
-            },
-            ".list": {
-              "padding": "0",
-              "margin": "0"
-            },
-            ".icon-wrap, .date-wrap": {
-              "display": "flex",
-              "align-items": "center"
-            },
-            ".btn span": {
-              "font-size": "1rem"
-            },
-            "h6": {
-              "margin": "0"
-            },
-            "h4": {
-              "line-height": "1.2",
+            ".mbr-text": {
+              "border-left": "1px solid currentColor",
               "padding-left": "1rem",
-              "margin": "0"
+              "color": "#C0BCB7"
             },
-            ".icon-wrap .mbr-iconfont": {
-              "font-size": "1rem",
-              "padding-right": "0.5rem",
-              "display": "block",
-              "cursor": "pointer",
-              "transition": "all 0.6s",
-              "color": "currentColor"
+            ".mbr-section-subtitle": {
+              "color": "#c0bcb7"
             },
-            ".time-wrap": {
-              "display": "flex",
-              "align-items": "center",
-              "justify-content": "space-between",
-              "min-width": "150px"
-            },
-            "@media (max-width: 992px)": {
-              ".item-wrap": {
-                "flex-direction": "column",
-                "padding-bottom": "2rem",
-                "border-bottom": "1px solid lightgray"
-              },
-              ".first": {
-                "border-top": "1px solid lightgray",
-                "padding-top": "2rem"
-              },
-              ".date-wrap": {
-                "min-width": "auto"
-              },
-              ".location-wrap": {
-                "min-width": "auto",
-                "padding-bottom": "1rem"
-              },
-              "h3": {
-                "min-width": "auto"
+            ".title": {
+              "text-align": "right",
+              "@media (max-width: 991px)": {
+                "text-align": "left"
               }
             },
-            "H1": {
-              "color": "#ba9b67"
+            "@media (max-width: 991px)": {
+              "& when not (@reverseContent)": {
+                ".col-12": {
+                  "flex-direction": "row-reverse"
+                }
+              },
+              ".col-12, .col-md-12": {
+                "padding": "0"
+              }
             },
-            ".mbr-section-subtitle, .title-align": {
-              "color": "#ba9b67"
+            ".si img": {
+              "width": "auto"
+            },
+            "& when (@reverseContent)": {
+              ".row, .col-12": {
+                "flex-direction": "row-reverse"
+              },
+              ".mbr-text": {
+                "border-right": "1px solid currentColor",
+                "padding-right": "1rem",
+                "border-left": "none",
+                "padding-left": "0",
+                "text-align": "right"
+              },
+              ".title": {
+                "text-align": "left"
+              },
+              "@media (max-width: 991px)": {
+                ".col-12": {
+                  "flex-direction": "initial"
+                },
+                ".title": {
+                  "text-align": "right"
+                }
+              }
             }
           },
-          "_name": "content6",
-          "_sourceTheme": "audiom4",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"content6 audiom4_content6\" group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n\t\t<input type=\"range\" inline title=\"Items\" name=\"menuItems1\" min=\"1\" max=\"15\" step=\"1\" value=\"1\">\n\t\t<header>Show / Hide</header>\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showSubTitle\">\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showmainTitle\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#000000\" selected>\n\t\t\t<input type=\"video\" title=\"Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row justify-content-center\">\n\t\t\t<div class=\"mbr-black col-md-12 col-lg-12\">\n\t\t\t\t<div class=\"title-align align-center\">\n\t\t\t\t\t<h2 class=\"mbr-section-subtitle mbr-semibold align-center mbr-light mbr-fonts-style\" data-app-selector=\".mbr-section-subtitle, .title-align\" mbr-theme-style=\"display-4\" mbr-if=\"showSubTitle\">\n\t\t\t\t\t\tUpcoming\n\t\t\t\t\t</h2>\n\t\t\t\t</div>\n\t\t\t\t<h1 class=\"mbr-section-title align-center mbr-bold pb-5 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showmainTitle\">UPCOMING TOUR DATES</h1>\n\t\t\t</div>\n\n\t\t\t<div class=\"col-12 list-col col-md-12 col-lg-12 md-pb\">\n\t\t\t\t<ul class=\"list\" mbr-list mbr-list-grow=\"menuItems1\">\n\t\t\t\t\t<li class=\"item-wrap\">\n\t\t\t\t\t\t<div class=\"date-wrap\">\n\t\t\t\t\t\t\t<h3 mbr-text class=\"mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-2\">XX</h3>\n\n\t\t\t\t\t\t\t<h4 mbr-text class=\"mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\tApril<br>2025\n\t\t\t\t\t\t\t</h4>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div class=\"location-wrap\">\n\t\t\t\t\t\t\t<h5 mbr-text class=\"mbr-bold align-left pb-1 mbr-fonts-style\" mbr-theme-style=\"display-5\">To be announced soon</h5>\n\t\t\t\t\t\t\t<div class=\"icon-wrap\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mobi-mbri-map-pin mobi-mbri\"></span>\n\t\t\t\t\t\t\t\t<h6 mbr-text class=\"location mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".location, .icon-wrap\">France</h6>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div class=\"mbr-section-btn align-right\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-primary-outline\" href=\"#\" data-app-placeholder=\"Type Text\" target=\"_blank\"><span class=\"mobi-mbri mobi-mbri-layers mbr-iconfont mbr-iconfont-btn\"></span>Not available yet</a></div>\n\t\t\t\t\t</li>\n\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
-          "_anchor": "content6-3z",
-          "_isUserblock": true,
-          "_cid": "u94hNTqL5x",
+          "_name": "content8",
+          "_sourceTheme": "wellnessm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"content8\" group=\"Article\" mbr-class=\"{'mbr-parallax-background': bg.parallax, 'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"checkbox\" name=\"reverseContent\" title=\"Reverse\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"8\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"12\" step=\"1\" condition=\"!fullWidth\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"range\" title=\"Size\" inline name=\"logoSize\" min=\"3\" max=\"8\" step=\"0.1\" value=\"5.8\" condition=\"showLogo\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#000000\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#0b0a08\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center col-lg-{{textWidth}} m-0\">\n            <div class=\"col-12 col-md\">\n                <div class=\"title w-100\">\n                    <h5 class=\"mbr-section-title mbr-fonts-style m-0\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\">TOUR DATES 2025&nbsp;</h5>\n                    <h6 class=\"mbr-section-subtitle mbr-fonts-style mt-2 mb-5 mb-lg-0\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-7\"></h6>\n                </div>\n            </div>\n            <div class=\"col-md-12 col-lg-9\">\n                <p class=\"mbr-text mbr-fonts-style\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-7\">Sat, 15 Feb-18 Feb | Jazz Festivals And Events Foundation | Romania<br>Thu, 17 Apr | Le Rocher de Palmer | Cenon, France<br>Fri, 18 Apr | La Gaîté Lyrique | Paris, France<br>Fri, 25 Apr | Jazz en Nord | France<br>Thu, 08 May | Jazzfest Trondheim | Dokkhuset Scene, Trondheim, Norway<br>Fri, 09 May | Victoria Theater | Malmö, Sweden<br>Sat, 07 Jun | tba |&nbsp; France<br>Mon, 07 Jul | Muffathalle /w Marcus Miller | Germany<br>Sat, 12 Jul | Kultursommer Oldenburg | Schloßpl. 1, Oldenburg, Germany<br>Wed, 30 Jul | Hafensommer /w Nik West | Würzburg, Germany<br>Sat, 08 Nov | tba&nbsp; | Germany</p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "uzsQ7ohF9B",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 15px)",
-              "padding-bottom": "(@paddingBottom * 15px)"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "h2": {
-              "width": "fit-content",
-              "display": "inline-block",
-              "&:before": {
-                "position": "absolute",
-                "content": "''",
-                "left": "50%",
-                "top": "-120px",
-                "bottom": "0",
-                "width": "1px",
-                "height": "100px",
-                "background": "currentColor"
-              },
-              "position": "relative"
-            },
-            "li": {
-              "list-style": "none"
-            },
-            ".location-wrap": {
-              "min-width": "500px"
-            },
-            ".btn": {
-              "min-width": "230px"
-            },
-            ".item-wrap": {
-              "display": "flex",
-              "align-items": "center",
-              "margin-bottom": "1.8rem",
-              "justify-content": "space-between"
-            },
-            ".col-title": {
-              "margin-bottom": "2rem"
-            },
-            "h3": {
-              "min-width": "110px"
-            },
-            ".date-wrap": {
-              "min-width": "260px"
-            },
-            ".btn-primary-outline, .btn-secondary-outline, .btn-info-outline, .btn-success-outline, .btn-warning-outline, .btn-danger-outline, .btn-black-outline, .btn-white-outline": {
-              "border": "none",
-              "&:hover, &:focus": {
-                "background": "inherit !important",
-                "color": "inherit !important"
-              }
-            },
-            ".list": {
-              "padding": "0",
-              "margin": "0"
-            },
-            ".icon-wrap, .date-wrap": {
-              "display": "flex",
-              "align-items": "center"
-            },
-            ".btn span": {
-              "font-size": "1rem"
-            },
-            "h6": {
-              "margin": "0"
-            },
-            "h4": {
-              "line-height": "1.2",
-              "padding-left": "1rem",
-              "margin": "0"
-            },
-            ".icon-wrap .mbr-iconfont": {
-              "font-size": "1rem",
-              "padding-right": "0.5rem",
-              "display": "block",
-              "cursor": "pointer",
-              "transition": "all 0.6s",
-              "color": "currentColor"
-            },
-            ".time-wrap": {
-              "display": "flex",
-              "align-items": "center",
-              "justify-content": "space-between",
-              "min-width": "150px"
-            },
-            "@media (max-width: 992px)": {
-              ".item-wrap": {
-                "flex-direction": "column",
-                "padding-bottom": "2rem",
-                "border-bottom": "1px solid lightgray"
-              },
-              ".first": {
-                "border-top": "1px solid lightgray",
-                "padding-top": "2rem"
-              },
-              ".date-wrap": {
-                "min-width": "auto"
-              },
-              ".location-wrap": {
-                "min-width": "auto",
-                "padding-bottom": "1rem"
-              },
-              "h3": {
-                "min-width": "auto"
-              }
-            },
-            "H1": {
-              "color": "#ba9b67"
-            },
-            ".mbr-section-subtitle, .title-align": {
-              "color": "#ba9b67"
-            }
-          },
-          "_name": "content6",
-          "_sourceTheme": "audiom4",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"content6 audiom4_content6\" group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n\t\t<input type=\"range\" inline title=\"Items\" name=\"menuItems1\" min=\"1\" max=\"15\" step=\"1\" value=\"1\">\n\t\t<header>Show / Hide</header>\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showSubTitle\">\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showmainTitle\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#000000\" selected>\n\t\t\t<input type=\"video\" title=\"Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row justify-content-center\">\n\t\t\t<div class=\"mbr-black col-md-12 col-lg-12\">\n\t\t\t\t<div class=\"title-align align-center\">\n\t\t\t\t\t<h2 class=\"mbr-section-subtitle mbr-semibold align-center mbr-light mbr-fonts-style\" data-app-selector=\".mbr-section-subtitle, .title-align\" mbr-theme-style=\"display-4\" mbr-if=\"showSubTitle\">\n\t\t\t\t\t\tUpcoming\n\t\t\t\t\t</h2>\n\t\t\t\t</div>\n\t\t\t\t<h1 class=\"mbr-section-title align-center mbr-bold pb-5 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showmainTitle\">UPCOMING TOUR DATES</h1>\n\t\t\t</div>\n\n\t\t\t<div class=\"col-12 list-col col-md-12 col-lg-12 md-pb\">\n\t\t\t\t<ul class=\"list\" mbr-list mbr-list-grow=\"menuItems1\">\n\t\t\t\t\t<li class=\"item-wrap\">\n\t\t\t\t\t\t<div class=\"date-wrap\">\n\t\t\t\t\t\t\t<h3 mbr-text class=\"mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-2\">XX</h3>\n\n\t\t\t\t\t\t\t<h4 mbr-text class=\"mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-5\">April<br>2025\n\t\t\t\t\t\t\t</h4>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div class=\"location-wrap\">\n\t\t\t\t\t\t\t<h5 mbr-text class=\"mbr-bold align-left pb-1 mbr-fonts-style\" mbr-theme-style=\"display-5\">To be announced soon</h5>\n\t\t\t\t\t\t\t<div class=\"icon-wrap\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mobi-mbri-map-pin mobi-mbri\"></span>\n\t\t\t\t\t\t\t\t<h6 mbr-text class=\"location mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".location, .icon-wrap\">France</h6>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div class=\"mbr-section-btn align-right\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-primary-outline\" href=\"#\" data-app-placeholder=\"Type Text\" target=\"_blank\"><span class=\"mobi-mbri mobi-mbri-layers mbr-iconfont mbr-iconfont-btn\"></span>Not available yet</a></div>\n\t\t\t\t\t</li>\n\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
-          "_anchor": "content6-40",
-          "_isUserblock": true,
-          "_cid": "u94hOu6mpy",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
+          "_params": {},
+          "_anchor": "content8-4c"
         },
         {
           "alias": false,
