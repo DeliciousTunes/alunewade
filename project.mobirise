@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "contact.html",
+    "currentPage": "concerts.html",
     "theme": {
       "name": "wellnessm5",
       "title": "WellnessM5",
@@ -69,7 +69,7 @@
     "mbrsiteDomain": "vqgdzwlf56",
     "cookiesAlert": false,
     "gdpr": false,
-    "uniqCompNum": 158,
+    "uniqCompNum": 159,
     "versionPublish": "5.6.11",
     "screenshot": "screenshot.png"
   },
@@ -3265,6 +3265,145 @@
           "_customHTML": "<section data-bs-version=\"5.1\" class=\"content5\" group=\"Article\" mbr-class=\"{'mbr-parallax-background': bg.parallax, 'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"10\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"12\" step=\"1\" condition=\"!fullWidth\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#000000\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#0b0a08\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-{{textWidth}} wrap\">\n                <h5 class=\"mbr-section-title mbr-fonts-style mb-2\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">DISCOGRAPHY</h5>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-if=\"showText\">Music - Releases - Collaborations - ....</p>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "tSB5lpp533",
           "_anchor": "content5-1m",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            "img": {
+              "width": "100%",
+              "max-height": "800px",
+              "object-fit": "cover"
+            },
+            ".image-wrapper": {
+              "max-height": "800px",
+              "overflow": "hidden"
+            },
+            ".social-row": {
+              "display": "flex",
+              "flex-wrap": "wrap"
+            },
+            ".soc-item": {
+              "position": "relative",
+              "display": "flex",
+              "cursor": "pointer",
+              "align-items": "center",
+              "justify-content": "center",
+              "border-radius": "50%",
+              "margin-right": "0.5rem",
+              "margin-bottom": "1rem",
+              "padding": "0.5rem",
+              "height": "2.5rem",
+              "width": "2.5rem",
+              "-webkit-box-shadow": "preserve-3d",
+              "-moz-box-shadow": "preserve-3d",
+              "transform-style": "preserve-3d",
+              "span": {
+                "color": "@socialIconColor",
+                "z-index": "99999"
+              },
+              "&::before, &::after": {
+                "content": "\"\"",
+                "width": "101%",
+                "height": "102%",
+                "position": "absolute",
+                "border-radius": "50%",
+                "top": "-1px",
+                "left": "0",
+                "-webkit-box-shadow": "translateZ(-1px)",
+                "-moz-box-shadow": "translateZ(-1px)",
+                "transform": "translateZ(-1px)"
+              },
+              "&::before": {
+                "border": "1px solid transparent",
+                "transition": "border-top-color 0.1s linear, border-right-color 0.1s linear 0.1s, border-bottom-color 0.1s linear 0.2s"
+              },
+              "&:hover::before": {
+                "border-top-color": "@socialBorderColor",
+                "border-right-color": "@socialBorderColor",
+                "border-bottom-color": "@socialBorderColor"
+              },
+              "&::after": {
+                "border": "0 solid transparent",
+                "transition": "transform 0.2s linear 0s, border-left-width 0s linear 0.3s"
+              },
+              "&:hover::after": {
+                "border-top": "1px solid @socialBorderColor",
+                "border-left-color": "@socialBorderColor",
+                "border-left-width": "1px",
+                "bordersborder-right-width": "1px",
+                "borderstransform": "rotate(270deg)"
+              }
+            },
+            ".mbr-section-subtitle": {
+              "color": "#c0bcb7",
+              "margin-bottom": "77px"
+            },
+            ".mbr-text": {},
+            ".text": {
+              "color": "#ddc499"
+            },
+            ".one": {
+              "color": "#c0bcb7",
+              "font-style": "italic"
+            },
+            "@media (max-width: 991px)": {
+              ".info": {
+                "margin-top": "2rem"
+              }
+            },
+            "@media (min-width: 992px)": {
+              ".right": {
+                "padding-right": "32px"
+              },
+              ".left": {
+                "padding-left": "32px"
+              }
+            },
+            "& when (@reverse)": {
+              ".row": {
+                "flex-direction": "row-reverse"
+              },
+              "@media (min-width: 992px)": {
+                ".right": {
+                  "padding-left": "32px",
+                  "padding-right": "16px"
+                },
+                ".left": {
+                  "padding-right": "32px",
+                  "padding-left": "16px"
+                }
+              },
+              ".info": {
+                "text-align": "right"
+              },
+              ".social-row": {
+                "justify-content": "flex-end"
+              }
+            },
+            ".mbr-text .text": {
+              "color": "#8d98b3"
+            }
+          },
+          "_name": "features8",
+          "_sourceTheme": "wellnessm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"features8\" group=\"Features\" mbr-class=\"{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n    \n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"3\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"3\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width Image\" min=\"4\" max=\"8\" step=\"1\" value=\"4\" condition=\"!fullWidth\">\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverse\">\n        <header>Show/Hide</header>\n        <select title=\"Images\" name=\"cardsAmount\">\n            <option value=\"1\" selected>1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n        </select>\n        <input type=\"checkbox\" name=\"showHeading\" title=\"Title\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Info\" name=\"showInfo\" checked>\n        <header condition=\"showSocial\">Social</header>\n        <input type=\"checkbox\" title=\"Social\" name=\"showSocial\">\n        <select title=\"Align\" name=\"contentAlign\" condition=\"showSocial\">\n            <option value selected>Left</option>\n            <option value=\"justify-content-center\">Center</option>\n            <option value=\"justify-content-end\">Right</option>\n        </select>\n        <input type=\"range\" name=\"socialCount\" title=\"Count\" min=\"1\" max=\"4\" step=\"1\" value=\"4\" condition=\"showSocial\">\n        <input type=\"color\" title=\"Color\" name=\"socialIconColor\" value=\"#ffffff\" condition=\"showSocial\">\n        <input type=\"color\" title=\"Border\" name=\"socialBorderColor\" value=\"#4c4c4c\" condition=\"showSocial\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background1-1.jpg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#000000\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#171410\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-lg-{{textWidth}} right\">\n                <div class=\"col-12\">\n                    <div class=\"image-wrapper\">\n                        <a href=\"https://save-it.cc/wa/watermelon-man\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/watermelon-man-cover-alune-wade-1-784x784.jpg\" alt></a>\n                    </div>\n                </div>\n                <div class=\"col-12 mt-2\" mbr-if=\"cardsAmount>1\">\n                    <div class=\"image-wrapper\">\n                        <img src=\"@PROJECT_PATH@/assets/images/features5.jpg\" alt=\"Mobirise\">\n                    </div>\n                </div>\n                <div class=\"col-12 mt-2\" mbr-if=\"cardsAmount>2\">\n                    <div class=\"image-wrapper\">\n                        <img src=\"@PROJECT_PATH@/assets/images/features7.jpg\" alt=\"Mobirise\">\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"col-12 col-lg left\">\n                <div class=\"row justify-content-center info\">\n                    <h3 class=\"mbr-section-title heading mbr-fonts-style mb-3\" data-app-selector=\".mbr-section-title\" data-app-placeholder=\"Type Text\" mbr-theme-style=\"display-2\" mbr-if=\"showHeading\">WATERMELON MAN</h3>\n                    <h3 class=\"mbr-section-subtitle mbr-fonts-style\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\"><div><span style=\"font-size: 1.2rem;\">Alune Wade reimagines Herbie Hancock’s 1962 classic through his Afrobeat lens, blending West African rhythms with New Orleans brass. Anchored by Wade’s signature bass and vocals, the track grooves with dynamic interplay between bass, drums, and piano, while talking drums add an authentic touch. Recorded between Paris and Lagos, this reinterpretation pays homage to Manu Dibango, bridging jazz tradition with modern Afro-jazz innovation. Produced by Wade and mixed by Nic Hard, it’s a bold tribute to the past and a fresh step into the future.</span><br></div></h3>\n                    <div class=\"col-12\" mbr-if=\"showInfo || showSocial\">\n                        <p mbr-text class=\"mbr-fonts-style mbr-text mb-1\" data-app-selector=\".mbr-text\" mbr-if=\"showInfo\">Release: \n                            <span class=\"text\" data-app-edit=\"content\" data-app-selector=\".text\">2024</span>\n                        </p>\n                        <p mbr-text class=\"mbr-fonts-style mbr-text mb-1\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-if=\"showInfo\">Label: \n                            <span class=\"text\" data-app-edit=\"content\" data-app-selector=\".text\">enja / yellowbird</span>\n                        </p>\n                        <p mbr-text class=\"mbr-fonts-style mbr-text\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-if=\"showInfo\">Listen at <a href=\"https://save-it.cc/wa/watermelon-man\" class=\"text-primary\" target=\"_blank\">Spotify</a></p>\n                    </div>\n                    <div class=\"social-row display-7 mt-3 {{contentAlign}}\" mbr-if=\"showSocial\">\n                        <div class=\"soc-item\">\n                            <a href=\"https://www.facebook.com/Mobirise/\" target=\"_blank\">\n                                <span mbr-icon class=\"mbr-iconfont socicon socicon-facebook\"></span>\n                            </a>\n                        </div>\n                        <div class=\"soc-item\" mbr-if=\"socialCount>1\">\n                            <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                <span mbr-icon class=\"mbr-iconfont socicon socicon-instagram\"></span>\n                            </a>\n                        </div>\n                        <div class=\"soc-item\" mbr-if=\"socialCount>2\">\n                            <a href=\"https://instagram.com/mobirise\" target=\"_blank\">\n                                <span mbr-icon class=\"mbr-iconfont socicon-logmein socicon\"></span>\n                            </a>\n                        </div>\n                        <div class=\"soc-item\" mbr-if=\"socialCount>3\">\n                            <a href=\"https://www.youtube.com/c/mobirise\" target=\"_blank\">\n                                <span mbr-icon class=\"mbr-iconfont socicon socicon-youtube\"></span>\n                            </a>\n                        </div>\n                        <div class=\"soc-item\" mbr-if=\"socialCount>4\">\n                            <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                <span mbr-icon class=\"mbr-iconfont socicon socicon-telegram\"></span>\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "features8-4e",
+          "_isUserblock": true,
+          "_cid": "uDTyGDfdnk",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
@@ -6664,7 +6803,7 @@
           },
           "_name": "content8",
           "_sourceTheme": "wellnessm5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"content8\" group=\"Article\" mbr-class=\"{'mbr-parallax-background': bg.parallax, 'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"checkbox\" name=\"reverseContent\" title=\"Reverse\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"8\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"12\" step=\"1\" condition=\"!fullWidth\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"range\" title=\"Size\" inline name=\"logoSize\" min=\"3\" max=\"8\" step=\"0.1\" value=\"5.8\" condition=\"showLogo\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#000000\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#0b0a08\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center col-lg-{{textWidth}} m-0\">\n            <div class=\"col-12 col-md\">\n                <div class=\"title w-100\">\n                    <h5 class=\"mbr-section-title mbr-fonts-style m-0\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\">TOUR DATES 2025&nbsp;</h5>\n                    <h6 class=\"mbr-section-subtitle mbr-fonts-style mt-2 mb-5 mb-lg-0\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-7\"></h6>\n                </div>\n            </div>\n            <div class=\"col-md-12 col-lg-9\">\n                <p class=\"mbr-text mbr-fonts-style\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-7\">Sat, 15 Feb | Jazz Fan Rising | Sala Elpis | Constanța, Romania&nbsp; - <a href=\"http://bit.ly/Alune_CNTA_EvenTIM\" class=\"text-primary\" target=\"_blank\">Tickets</a><br>Sun, 16 Feb | Jazz Fan Rising | Sala Dalles | Bucharest, Romania  - <a href=\"http://bit.ly/Alune_BUCU_EventBOOK\" class=\"text-primary\" target=\"_blank\">Tickets</a>\n<br>Mon, 17 Feb | Palatul Culturii | Bistrița | Romania  - <a href=\"http://bit.ly/Alune_CLUJ_EventBOOK\" class=\"text-primary\" target=\"_blank\">Tickets</a>\n<br>Tue, 18 Feb | Jazz Fan Rising | Sala Studio, Academia de Muzică | Cluj-Napoca, Romania  - <a href=\"https://eventbook.ro/music/bilete-alune-wade-cluj\" class=\"text-primary\" target=\"_blank\">Tickets</a><br><br>Apr 17, 2025 – Le Rocher de Palmer (Sortie de résidence), Bordeaux, France<br>Apr 25, 2025 – Jazz en Nord, France<br>May 08, 2025 – Jazzfest Trondheim, Dokkhuset Scene, Trondheim, Norway<br>May 09, 2025 – Victoria Theater, Malmö, Sweden<br>Jun 04, 2025 – L'Ermitage, Paris, France<br>Jun 07, 2025 – Musiques Métisses, France<br>Jul 07, 2025 – Muffathalle /w Marcus Miller, Germany<br>Jul 12, 2025 – Kultursommer Oldenburg, Schloßpl. 1, Oldenburg, Germany<br>Jul 13, 2025 – Marseille Jazz des Cinq Continents, France<br>Jul 30, 2025 – Hafensommer /w Nik West, Würzburg, Germany<br>Nov 08, 2025 – tba, Germany<br></p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"content8\" group=\"Article\" mbr-class=\"{'mbr-parallax-background': bg.parallax, 'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"checkbox\" name=\"reverseContent\" title=\"Reverse\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"8\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"12\" step=\"1\" condition=\"!fullWidth\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"range\" title=\"Size\" inline name=\"logoSize\" min=\"3\" max=\"8\" step=\"0.1\" value=\"5.8\" condition=\"showLogo\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#000000\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#0b0a08\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center col-lg-{{textWidth}} m-0\">\n            <div class=\"col-12 col-md\">\n                <div class=\"title w-100\">\n                    <h5 class=\"mbr-section-title mbr-fonts-style m-0\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\">TOUR DATES 2025&nbsp;</h5>\n                    <h6 class=\"mbr-section-subtitle mbr-fonts-style mt-2 mb-5 mb-lg-0\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-7\"></h6>\n                </div>\n            </div>\n            <div class=\"col-md-12 col-lg-9\">\n                <p class=\"mbr-text mbr-fonts-style\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-7\">Sat, 15 Feb | Jazz Fan Rising | Sala Elpis | Constanța, Romania&nbsp; - <a href=\"http://bit.ly/Alune_CNTA_EvenTIM\" class=\"text-primary\" target=\"_blank\">Tickets</a><br>Sun, 16 Feb | Jazz Fan Rising | Sala Dalles | Bucharest, Romania  - <a href=\"http://bit.ly/Alune_BUCU_EventBOOK\" class=\"text-primary\" target=\"_blank\">Tickets</a>\n<br>Mon, 17 Feb | Palatul Culturii | Bistrița | Romania  - <a href=\"http://bit.ly/Alune_CLUJ_EventBOOK\" class=\"text-primary\" target=\"_blank\">Tickets</a>\n<br>Tue, 18 Feb | Jazz Fan Rising | Sala Studio, Academia de Muzică | Cluj-Napoca, Romania  - <a href=\"https://eventbook.ro/music/bilete-alune-wade-cluj\" class=\"text-primary\" target=\"_blank\">Tickets</a><br><br>Apr 17, 2025 – Le Rocher de Palmer (Sortie de résidence), Bordeaux, France<br>Apr 25, 2025 – Jazz en Nord, France<br>May 08, 2025 – Jazzfest Trondheim, Dokkhuset Scene, Trondheim, Norway<br>May 09, 2025 – Victoria Theater, Malmö, Sweden<br>Jun 04, 2025 – L'Ermitage, Paris, France<br>Jun 07, 2025 – Musiques Métisses, France<br>Jul 07, 2025 – Muffathalle /w Marcus Miller, Germany<br>Jul 12, 2025 – Kultursommer Oldenburg, Schloßpl. 1, Oldenburg, Germany<br>Jul 13, 2025 – Marseille Jazz des Cinq Continents, France<br>Jul 30, 2025 – Hafensommer /w Nik West, Würzburg, Germany<br>Nov 08, 2025 – Leverkusener Jazz Tage, Germany<br></p>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "uzsQ7ohF9B",
           "_anchor": "content8-4c",
           "_protectedParams": [],
